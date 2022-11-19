@@ -1,3 +1,4 @@
+
 # Cloud Inventory Management
 A part of DBMS mini project, this project was made so that I can understand the working of SQL (Sequel) Database. So, as the topic tells, it is managing cloud inventory such as Virtual Machines Instances and also storage buckets for users. 
 Used Github's OctaCat as my frontend webpage logo and named **OctaOcean** (like Digital Ocean 😅)
@@ -10,7 +11,55 @@ This is my tech stack used, React and Tailwind CSS for beautiful frontend which 
 
 
 ## Screenshots
+
+Small Screen's or Mobile View Screenshots
+
 <img src="./Images/main.png"><img src="./Images/instancespng.png">
+
+Desktop Screen Screenshot
+
+<img src="./Images/p1d.png">
+
+## Routing
+
+> Home Page
+route = /
+
+<img src="./Images/p1d.png">
+
+> EC2 Instances Page
+route = /instances
+
+<img src="./Images/p2d.png">
+
+> Storage Page
+> route = /storagebuckets
+
+<img src="./Images/p6d.png">
+
+> Report Area
+
+<img src="./Images/p3d.png">
+
+> Purchase Page
+> route = /purchase
+
+<img src="./Images/p4d.png">
+
+> Thank You Page
+> route = /thankyou
+
+<img src="./Images/p5d..png">
+
+> Error Page
+> route = /*
+
+<img src="./Images/p7d.png">
+
+> Admin Page
+> route = /admin
+
+<img src="./Images/p8d.png">
 
 ## How to Start?
 To start the Frontend or Website
@@ -23,6 +72,3 @@ To start the Backend or NodeJS (Make sure that nodemon is installed)
     npm install
     >> nodemon index.js
 And start the MySQL server on the localhost 
-
-
-#### Note : Still Working Out!
