@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const cors = require("cors");
 require("dotenv").config();
 
-const ipaddr =  "localhost";
+const ipaddr =  "127.0.0.1";
 app.use(cors());
 app.use(express.json());
 
@@ -23,7 +23,7 @@ app.post("/", (req, res) => {
   const email = req.body.email;
   const message = req.body.message;
   db.query(
-    `INSERT INTO cloud_inventory.messages (name, email, acknowledge, message) VALUES ('${name}', '${email}', false, '${message}')`,
+    `INSERT INTO cloud_inventory.messages (name, email, acknowledge, message) VALUES ("${name}", "${email}", false, "${message}")`,
     (err, result) => {
       if (err) {
         console.log(err);
@@ -33,6 +33,28 @@ app.post("/", (req, res) => {
     }
   );
 });
+
+app.post("/instancestore", (req, res) => {
+  db.query(`INSERT INTO cloud_inventory.instances_users (name, email, phno, operatingsystem, ram, cpu, duration, purchasevalue, card) VALUES ('${req.body.name}', '${req.body.email}', '${req.body.phno}', '${req.body.os}', '${req.body.ram}', '${req.body.cpu}', '${req.body.duration} hours', '${req.body.purchasevalue}', '${req.body.card}');
+  `, (err, result) => {if(err) {
+    console.log(err);
+  }
+else {
+  res.send("Values inserted");
+}})
+
+
+})
+
+app.post("/storagestore", (req, res) => {
+  db.query(`INSERT INTO cloud_inventory.storage_users ( name, email, phno, storage, network, duration, purchasevalue, card) VALUES ("${req.body.name}", "${req.body.email}", "${req.body.phno}", "${req.body.storage}", "${req.body.network}", "${req.body.duration} months", "${req.body.purchasevalue}", "${req.body.card}");`, (err, result) => {
+    if(err) {
+      console.log(err);
+    } else {
+      res.log("Values inserted")
+    }
+  })
+})
 
 // Reading of Data : READ
 app.get("/messages", (req, res) => {
@@ -47,6 +69,33 @@ app.get("/messages", (req, res) => {
     }
   );
 });
+
+app.get("/storagepurchase", (req, res) => {
+  db.query(
+    `SELECT * FROM cloud_inventory.storage_users;`,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
+app.get("/instancespurchase", (req, res) => {
+  db.query(
+    `SELECT * FROM cloud_inventory.instances_users;`,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    }
+  );
+});
+
 
 app.get("/osdata", (req, res) => {
     db.query(`SELECT * FROM cloud_inventory.operating_system ORDER BY developer DESC;`, (err, result) => {
