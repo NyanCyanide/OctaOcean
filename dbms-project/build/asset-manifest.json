@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0381a950.css",
+    "main.js": "/static/js/main.98b49e88.js",
+    "static/media/CPU1.png": "/static/media/CPU1.f8f0793fd7a0d589d11b.png",
+    "static/media/stripe.png": "/static/media/stripe.9755e0835b1ab1538bdd.png",
+    "static/media/catop.jpg": "/static/media/catop.babe776e63ee608ddffa.jpg",
+    "static/media/cpu2.png": "/static/media/cpu2.39f34bbbc9a6247cc509.png",
+    "static/media/macintosh.jpg": "/static/media/macintosh.ce2dbc6bf592cfec9581.jpg",
+    "static/media/network.png": "/static/media/network.ef60c6d348a77eec83e0.png",
+    "static/media/linux.png": "/static/media/linux.8f43b47d4911fa04d8f3.png",
+    "static/media/harddisk.png": "/static/media/harddisk.0832aab2fe145de7a587.png",
+    "static/media/logo.gif": "/static/media/logo.a73a63d1c8ba93cb4382.gif",
+    "static/media/RAM.png": "/static/media/RAM.4e820aeb731a0a4e84c2.png",
+    "static/media/android.png": "/static/media/android.89fe62949d3bc9befac2.png",
+    "index.html": "/index.html",
+    "main.0381a950.css.map": "/static/css/main.0381a950.css.map",
+    "main.98b49e88.js.map": "/static/js/main.98b49e88.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0381a950.css",
+    "static/js/main.98b49e88.js"
+  ]
+}
